@@ -1,0 +1,7 @@
+1. In http1 request and responses are processed sequentially.leading to head-of-line blocking.which means if there is a single queue of data packets waiting to be transmitted.It is causes one delay request can affect other requests. but Http2 is allows multiple requests and responses to be send and recieved at the same timeover a single transmission control protocal connection.Its reducing latency.
+
+2. Headers are send witheach request and response in Http1 its leading to unnecessary data tranmission. In Http2 headers are compressed.so its reducing data size and reducing overhead and improving performance
+
+3. The server can't send resources until the client requests anything.In Http2 the server can push resources to the client before they are requested something.Its improves page loading time.
+
+4.Http1 uses a textal format .it causes errers.Http2 uses a binary format .this make it more efficient to parse and reducing errors
