@@ -1,0 +1,13 @@
+document and window objects are essential for JavaScript programming in the web browser environment, they represent different aspects of the web page and browser interface
+1.The document object is focused on interacting with the content and structure of the HTML document.
+2.The document object represents the HTML document itself.
+3.Controlling the browser window and environment
+4.Its Contains properties related to the browser window, such as innerWidth, innerHeight, location, etc.
+5.Handles events related to the window, such as resize, scroll, load, etc.
+
+
+1.windows object is focused on controlling the browser window and managing the overall browser environment.
+2.The window object represents the browser window or tab in which the web page is displayed.
+3.Interacting with the content of the web page.
+4. Its Contains properties related to the document, such as URL, title, forms, etc.
+5.Handles events related to the document, such as click, submit, load, etc.
