@@ -73,16 +73,48 @@ primenumbers([5 , 7 , 9 , 12 , 13])
 
 // d . return all the prime numbers in arrey ( IIFE )
 
-(function(input){
-    var arr  = input
+(function(numbers){
+    var arr = numbers
     var l = arr.length
     var arr2 = []
     for(var i = 0 ; i < l ; i++){
-        if(Number(input[i])%2!=0 && Number(input[i])%3!=0){
-            arr2.push(input[i])
+        if(Number(numbers[i])%2!=0 && Number(numbers[i])%3!=0){
+            arr2.push(numbers[i])
         }
     }
     var output = arr2.join(" ")
     console.log(output)
-})([2 ,4 ,5 ,7])
- 
+
+})([ 5 , 7 , 12 , 13])
+
+// e. return all the palindromes in an arrey ( anonymous function )
+
+
+var input = function(a){
+    for(var i = 0 ; i < a.length ; i++){
+        var b = a[i].split("").reverse().join("")
+        if(a[i]==b){
+            console.log(a[i] + " is palindrome")
+        }
+        else{
+            console.log(a[i] + " is not palindrome")
+        }
+    }
+}
+
+input(["MalayalaM" , "Rishi"])
+
+// e. return all the palindromes in an arrey ( IIFE )
+
+(function(a){
+    for(var i = 0 ; i < a.length ; i++){
+        var b = a[i].split("").reverse().join("")
+        if(a[i]==b){
+            console.log(a[i] + " is palindrome")
+        }
+        else{
+            console.log(a[i] + " is not palindrome")
+        }
+    }
+})(["malayalam" , "english"])
+
