@@ -11,7 +11,7 @@ var output = function(input) {
         
         console.log(arr2)
 }
-output(["1", "2", "3", "4", "5"])
+output([1, 2, 3, 4, 5])
 
 // a. Print add numbers in an arrey ( IIFE )
 
@@ -26,7 +26,7 @@ output(["1", "2", "3", "4", "5"])
     }
     
     console.log(arr2)
-})(["1" , "2" , "4" , "6" , "7"]);
+})([1 , 2 , 4 , 6 , 7]);
 
 // c. Sum of all numbers in an arrey  ( anonymous function )
 
@@ -40,7 +40,7 @@ var input = function(arr) {
         console.log(output)
 }
 
-input(["5" , " 10" , "15" , "20"])
+input([5 , 10 , 15 , 20])
 
 // c. sum of all numbers in an arrey ( IIFE )
 
@@ -52,7 +52,7 @@ input(["5" , " 10" , "15" , "20"])
         output = output + Number(arr[i])
     }
     console.log(output)
-})(["10" , "20" , "2" , "25"])
+})([10 , 20 , 2 , 25])
 
 // d. return all the prime numbers in arrey ( anonymous function )
 
@@ -69,4 +69,20 @@ var primenumbers = function(numbers){
     console.log(output)
 }
 
-primenumbers(["5" , "7" , "9" , "12" , "13"])
+primenumbers([5 , 7 , 9 , 12 , 13])
+
+// d . return all the prime numbers in arrey ( IIFE )
+
+(function(input){
+    var arr  = input
+    var l = arr.length
+    var arr2 = []
+    for(var i = 0 ; i < l ; i++){
+        if(Number(input[i])%2!=0 && Number(input[i])%3!=0){
+            arr2.push(input[i])
+        }
+    }
+    var output = arr2.join(" ")
+    console.log(output)
+})([2 ,4 ,5 ,7])
+ 
