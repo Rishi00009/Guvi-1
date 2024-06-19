@@ -28,6 +28,44 @@ output([1, 2, 3, 4, 5])
     console.log(arr2)
 })([1 , 2 , 4 , 6 , 7]);
 
+// b. convert all the strings to title caps in a string arrey ( anonymous function )
+
+let input = function(arr) {
+    let l = arr.length
+    let ans = []
+    for(let j = 0 ; j < l ; j++){
+        let str = arr[j]
+        str = str.toLowerCase().split(' ');
+            for (var i = 0; i < str.length; i++) {
+                str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+            } 
+            ans.push(str)
+    }
+                    console.log(ans.join(" ").split(" "));
+
+}
+
+input(["rishi" , "kowsi"])
+
+// b. convert all the strings to title caps in a string arrey ( IIFE )
+
+(function(arr) {
+    let l = arr.length
+    let ans = []
+    for(let j = 0 ; j < l ; j++){
+        let str = arr[j]
+        str = str.toLowerCase().split(' ');
+            for (var i = 0; i < str.length; i++) {
+                str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+            } 
+            ans.push(str)
+    }
+                    console.log(ans.join(" ").split(" "));
+
+})(["rishi" , "kowsi"])
+
+
+
 // c. Sum of all numbers in an arrey  ( anonymous function )
 
 var input = function(arr) {
