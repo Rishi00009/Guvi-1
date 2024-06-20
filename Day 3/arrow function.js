@@ -1,4 +1,4 @@
-// Print odd numbers in an arrey
+// a. Print odd numbers in an arrey
 
 let input = (arrey) => {
     let l = arrey.length
@@ -32,3 +32,31 @@ let input = (arr) => {
 }
 
 let output = input(["rishi" , "kowsi"])
+
+// c . Sum of all numbers in an arrey
+
+let input = (arr) => {
+    let l = arr.length
+    let ans = 0
+    for(let j = 0 ; j < l ; j++){
+        ans = ans + arr[j]   
+    }            
+    console.log(ans)
+}
+
+let nums = input([1,2,3,4,5])
+
+// d . Return all the prime numbers in an arrey
+
+let input = (arr) => {
+    let l = arr.length
+    let ans = []
+    for(let j = 0 ; j < l ; j++){
+        if(Number(arr[i])%2!=0 && Number(arr[i])%3!=0 ){
+            ans
+        }   
+    }            
+    console.log(ans)
+}
+
+let nums = input([1,2,3,4,5])
