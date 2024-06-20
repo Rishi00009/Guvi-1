@@ -51,12 +51,29 @@ let nums = input([1,2,3,4,5])
 let input = (arr) => {
     let l = arr.length
     let ans = []
-    for(let j = 0 ; j < l ; j++){
+    for(let i = 0 ; i < l ; i++){
         if(Number(arr[i])%2!=0 && Number(arr[i])%3!=0 ){
-            ans
+            ans.push(arr[i])
         }   
     }            
     console.log(ans)
 }
 
-let nums = input([1,2,3,4,5])
+let nums = input([10 ,13 ,19 ,4 ,5 ,18 ])
+
+// e . Return all the alindromes in an arrey
+
+let input = (arr,n) => {
+    for(var i = 0 ; i < n ; i++){
+        var b = arr[i].split("").reverse().join("")
+        if(arr[i]==b){
+            console.log(arr[i] + " is palindrome")
+        }
+        else{
+            console.log(arr[i] + " is not palindrome")
+        }
+    }
+    
+}
+
+let ans = input(["malyalam" , "madam" , "Evening"] , 3)
