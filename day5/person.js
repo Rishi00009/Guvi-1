@@ -16,8 +16,20 @@ getAge(){
     return this.age;
 }
 
+getDob(){
+    return this.dob;
+}
+
+getGender(){
+    return this.gender;
+}
+
 getEduQual(){
     return this.eduQual;
+}
+
+getPhnNum(){
+    return this.phnNum;
 }
 
 }
