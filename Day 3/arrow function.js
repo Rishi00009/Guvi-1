@@ -61,7 +61,7 @@ let input = (arr) => {
 
 let nums = input([10 ,13 ,19 ,4 ,5 ,18 ])
 
-// e . Return all the alindromes in an arrey
+// e . Return all the palindromes in an arrey
 
 let input = (arr,n) => {
     for(var i = 0 ; i < n ; i++){
