@@ -9,58 +9,98 @@
     
 </head>
 <body>
-    <div style="width: 100%; float: left;"><h1 id="title"> calculator</h1>
-    <p id="discription">In This site u can use calculator</p>
+  
+    <h1 id="title">Calculator</h1>
+    <p id="description">This is a simple calculator that performs addition, subtraction, and multiplication.</p>
+    <div class="inputs">
+    <input type="text" id="result" disabled>
+    <div>
+    <button id="clear">C</button>
+    <button id="backspaqce">←</button>
+    <button id="dot">.</button>
+    <button id="multiply">*</button>
     </div>
-    <div class="calculator">
-        <input  type="text" id="display" disabled>+
-        <div class="buttons">
-          <button onclick="clearDisplay()">C</button>
-          <button onclick="appendToDisplay('.')">.</button>
-          <button onclick="backspace()">←</button>
-          <button onclick="appendToDisplay('*')">*</button>        
-          <button onclick="appendToDisplay('7')">7</button>
-          <button onclick="appendToDisplay('8')">8</button>
-          <button onclick="appendToDisplay('9')">9</button>
-          <button onclick="appendToDisplay('/')">/</button>
-          <button onclick="appendToDisplay('4')">4</button>
-          <button onclick="appendToDisplay('5')">5</button>
-          <button onclick="appendToDisplay('6')">6</button>
-          <button onclick="appendToDisplay('-')">-</button>
-          <button onclick="appendToDisplay('1')">1</button>
-          <button onclick="appendToDisplay('2')">2</button>
-          <button onclick="appendToDisplay('3')">3</button>
-          <button onclick="appendToDisplay('+')">+</button>
-          <button onclick="appendToDisplay('0')">0</button>
-          <button onclick="appendToDisplay('00')">00</button> 
-          <button class="equal" onclick="calculate()">=</button>
-          
-        </div>
-      </div>
-      <script>  
-      function clearDisplay() {
-        document.getElementById('display').value = '';
+    <div>
+      <button id="7">7</button>
+      <button id="8">8</button>
+      <button id="9">9</button>
+      <button id="devided">/</button>
+    </div>
+    <div>
+      <button id="4">4</button>
+      <button id="5">5</button>
+      <button id="6">6</button>
+      <button id="subtract">-</button>
+    </div>
+    <div>
+    <button id="1">1</button>
+    <button id="2">2</button>
+    <button id="3">3</button>
+    <button id="add">+</button>
+    </div>
+    <div>
+      <button id="0">0</button>
+      <button id="00">00</button>
+      <button id="equal">=</button>
+    </div>
+    </div>
+    
+  
+    <script>
+      let result = document.getElementById('result');
+      let clearBtn = document.getElementById('clear');
+      let addBtn = document.getElementById('add');
+      let multiply = document.getElementById('multiply');
+      let devided = document.getElementById('devided');
+      let subtractBtn = document.getElementById('subtract');
+      let num1Btn = document.getElementById('1');
+      let num2Btn = document.getElementById('2');
+      let num3Btn = document.getElementById('3');
+      let num4Btn = document.getElementById('4');
+      let num5Btn = document.getElementById('5');
+      let num6Btn = document.getElementById('6');
+      let num7Btn = document.getElementById('7');
+      let num8Btn = document.getElementById('8');
+      let num9Btn = document.getElementById('9');
+      let num0Btn = document.getElementById('0');
+      let equalBtn = document.getElementById('equal');
+  
+      let currentValue = '';
+  
+      clearBtn.addEventListener('click', clearResult);
+      addBtn.addEventListener('click', () => appendNumber('+'));
+      multiply.addEventListener('click', () => appendNumber('*'));
+      devided.addEventListener('click', () => appendNumber('/'));
+      subtractBtn.addEventListener('click', () => appendNumber('-'));
+      num1Btn.addEventListener('click', () => appendNumber('1'));
+      num2Btn.addEventListener('click', () => appendNumber('2'));
+      num3Btn.addEventListener('click', () => appendNumber('3'));
+      num4Btn.addEventListener('click', () => appendNumber('4'));
+      num5Btn.addEventListener('click', () => appendNumber('5'));
+      num6Btn.addEventListener('click', () => appendNumber('6'));
+      num7Btn.addEventListener('click', () => appendNumber('7'));
+      num8Btn.addEventListener('click', () => appendNumber('8'));
+      num9Btn.addEventListener('click', () => appendNumber('9'));
+      num0Btn.addEventListener('click', () => appendNumber('0'));
+      equalBtn.addEventListener('click', calculateResult);
+  
+      function clearResult() {
+        result.value = '';
+        currentValue = '';
       }
-      
-      function appendToDisplay(value) {
-        document.getElementById('display').value += value;
+  
+      function appendNumber(number) {
+        currentValue += number;
+        result.value = currentValue;
       }
-      
-      function calculate() {
-        try {
-          const result = eval(document.getElementById('display').value);
-          document.getElementById('display').value = result;
-        } catch (error) {
-          document.getElementById('display').value = 'Error';
-        }
+  
+      function calculateResult() {
+        let resultValue = eval(currentValue);
+        result.value = resultValue;
+        currentValue = resultValue.toString();
       }
-      function backspace() {
-            const display = document.getElementById('display');
-            display.value = display.value.slice(0, -1);
-            }
-
-            
     </script>
+  
     <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
 </body>
-</html>p
+</html>
