@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and Table</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <div class="container mt-5">
+        <h1 id="title">Form Submission</h1>
+        <p id="description">Please fill out the form below and submit it to see your data in the table.</p>
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="first-name" id="name-label">First Name</label>
+                <input type="text" class="form-control" id="first-name" placeholder="Enter your first name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name" id="last-name-label">Last Name</label>
+                <input type="text" class="form-control" id="last-name" placeholder="Enter your last name" required>
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="pincode">Pincode</label>
+                <input type="text" class="form-control" id="pincode" placeholder="Enter your pincode" required>
+            </div>
+            <div class="form-group">
+                <label>Gender</label><br>
+                <input type="radio" name="gender" id="male" value="Male" required> <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="Female" required> <label for="female">Female</label>
+            </div>
+            <div class="form-group">
+                <label>Food Choices (Choose at least 2)</label><br>
+                <input type="checkbox" id="food1" value="Dhosa"> <label for="food1">Dhosa</label>
+                <input type="checkbox" id="food2" value="Idli"> <label for="food2">Idli</label>
+                <input type="checkbox" id="food3" value="Poori"> <label for="food3">Poori</label>
+                <input type="checkbox" id="food4" value="Full meal"> <label for="food4">Full meal</label>
+                <input type="checkbox" id="food5" value="Biriyani"> <label for="food5">Biriyani</label>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state" placeholder="Enter your state" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" class="form-control" id="country" placeholder="Enter your country" required>
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional Comments</label>
+                <textarea class="form-control" id="comments" rows="3" placeholder="Enter your comments here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        </form>
+        <h2 class="mt-5">Submitted Data</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Pincode</th>
+                    <th>Gender</th>
+                    <th>Food</th>
+                    <th>State</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody id="dataTableBody">
+                <!-- Data will be added here -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('survey-form');
+    const tableBody = document.getElementById('dataTableBody');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        // Gather form data
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const email = document.getElementById('email').value;
+        const pincode = document.getElementById('pincode').value;
+        const gender = document.querySelector('input[name="gender"]:checked').value;
+        
+        const foodChoices = [];
+        document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+            foodChoices.push(checkbox.value);
+        });
+        
+        if (foodChoices.length < 2) {
+            alert('Please select at least 2 food choices.');
+            return;
+        }
+        
+        const state = document.getElementById('state').value;
+        const country = document.getElementById('country').value;
+
+        // Create a new row in the table
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td>${firstName}</td>
+            <td>${lastName}</td>
+            <td>${email}</td>
+            <td>${pincode}</td>
+            <td>${gender}</td>
+            <td>${foodChoices.join(', ')}</td>
+            <td>${state}</td>
+            <td>${country}</td>
+        `;
+        tableBody.appendChild(newRow);
+
+        // Clear the form
+        form.reset();
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+    });
+});
+
+    </script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+</html>

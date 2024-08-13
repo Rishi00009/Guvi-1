@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Callback Hell</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet'  href='style.css'>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <script src="script.js" defer></script>
 </head>
-<body>
-    <div>
-        <p></p>
-    </div>
-        <script>
-            console.log(10)
-        Timer = () =>{
+<body style="background-color: blueviolet;">
+    <div id="message" style="width: 50%; float:left; margin-left: 25%; height: 100px; padding-top: 5%; margin-top: 15%; background-color: blueviolet; color: black; text-align: center;"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // let counter = 10;
+
+    // function displayMessage(message) {
+    //     document.getElementById('message').innerText = message;
+    // }
+
+    // function countDown(currentNumber, callback) {
+    //     if (currentNumber < 1) {
+    //         callback();
+    //     } else {
+    //         setTimeout(function() {
+    //             displayMessage(currentNumber);
+    //             countDown(currentNumber - 1, callback);
+    //         }, 1000);
+    //     }
+    // }
+
+    // countDown(counter, function() {
+    //     displayMessage("Happy Independence Day");
+    // });
+    const Timer = () =>{
                 console.log(10)
                 setTimeout(() =>{
                     console.log(9);
@@ -51,18 +67,8 @@
                 },1000)
                 },1000)
                 },1000)
-
-                function name(){
-                    console.log("Rishi")
-                }
             }
-            
-            
-        </script>
-        
-
-    
-    
-    
+});
+    </script>
 </body>
 </html>
