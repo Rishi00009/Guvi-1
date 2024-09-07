@@ -1,0 +1,38 @@
+.plan{
+  color: rgb(143, 143, 143);
+
+}
+.card{
+  float: left;
+  width: 20%;
+  color: black;
+  text-align: center;
+  background-color: white;
+  margin-left: 10%;
+  border-radius: 10px;
+  padding-bottom: 1%;
+}
+
+.price{
+  font-size: xx-large;
+}
+
+.uses{
+  font-size: small;
+  text-align: left;
+  padding-left: 15%;
+  
+}
+
+.button{
+  float: left;
+  font-size: small;
+  margin-left: 10%;
+  padding: 5% 30% 5% 30%;
+  background-color: rgb(63, 63, 245);
+  border-radius: 30px;
+}
+
+.block{
+  color: grey;
+}
