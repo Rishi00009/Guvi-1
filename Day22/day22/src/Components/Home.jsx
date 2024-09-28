@@ -12,18 +12,20 @@ function home(){
             </div>
             <div className="usage">
                 <div>
-                <p>Fully Responsive</p>
-                <p>This theme will look great on any device,no matrter the size!</p>
+                <p className="heading">Fully Responsive</p>
+                <p className="shortnote">This theme will look great on any device,no matrter the size!</p>
                 </div>
                 <div>
-                <p>Bootstrap 5 Ready</p>
-                <p>Featuring the latest build of the new Bootstrap 5 framework!</p>
+                <p className="heading">Bootstrap 5 Ready</p>
+                <p className="shortnote">Featuring the latest build of the new Bootstrap 5 framework!</p>
                 </div>
                 <div>
-                <p>easy to Use</p>
-                <p>Ready to use with your own content,or customize the source files</p>
+                <p className="heading">easy to Use</p>
+                <p className="shortnote">Ready to use with your own content,or customize the source files</p>
                 </div>
-                
+                <div className="image2">
+
+                </div>
             </div>
         </div>
     )
