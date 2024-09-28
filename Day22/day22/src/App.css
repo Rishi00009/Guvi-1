@@ -1,0 +1,61 @@
+.header{
+  width: 100%;
+  height: 3rem;
+  background-color: white;
+  margin: 0%;
+}
+
+.sitename{
+  width: 20%;
+  float: left;
+  padding: .5% 0% 2% 10%;
+  margin: 0%;
+  font-size: x-large;
+}
+
+.signup{
+  width: 7%;
+  height: fit-content;
+  background-color: rgb(67, 67, 248);
+  margin: .8% 0% 2% 45%;
+  font-size: medium;
+  border-radius: 5px;
+}
+.firstimage{
+  width: 100%;
+  height:25rem;
+  background-image: url(./Components/Images/image1.jpg);
+  
+}
+.p1{
+  width: 100%;
+  float: left;
+  color: rgb(255, 255, 255);
+  font-size: xx-large;
+  padding: 8% 0% 0% 18%;
+  
+}
+
+.email{
+  width: 20%;
+  height: 50px;
+  float: left;
+  padding: 0% 0% 0% 40%;
+  margin: 0%;
+}
+
+.submit{
+  width: 7%;
+  height: fit-content;
+  background-color: rgb(67, 67, 248); 
+  font-size: medium;
+  border-radius: 5px;
+  padding: .5%;
+}
+
+.usage{
+  width:100%;
+  height:fit-content;
+  float: left;
+  margin: 3% 10% 3% 10%;
+}
