@@ -1,6 +1,6 @@
 .header{
   width: 100%;
-  height: 3rem;
+  height: 4rem;
   background-color: white;
   margin: 0%;
 }
@@ -17,11 +17,12 @@
   width: 7%;
   height: fit-content;
   background-color: rgb(67, 67, 248);
-  margin: .8% 0% 2% 45%;
+  padding: .3%;
+  margin: .8% 0% 2% 60%;
   font-size: medium;
   border-radius: 5px;
 }
-.firstimage{
+.image1{
   width: 100%;
   height:25rem;
   background-color:rgb(138, 138, 238) ;
@@ -37,11 +38,12 @@
 }
 
 .email{
-  width: 20%;
+  width: 70%;
   height: 50px;
   float: left;
-  padding: 0% 0% 0% 40%;
-  margin: 0%;
+  padding:0%;
+  margin: 0% 2% 0% 10% ;
+  border-radius: 10px;
 }
 
 .submit{
@@ -51,44 +53,94 @@
   font-size: medium;
   border-radius: 5px;
   padding: .5%;
+  color: white;
 }
 
 .usage{
-  width:100%;
+  width:95%;
   height:fit-content;
   float: left;
-  margin: 8% 0% 8% 0%;
+  margin: 8% 0% 8% 5%;   
+                                     
 }
-
-.heading1{
-  width:35%;
+.container{
+  width: 33%;
+  float: left;
+}
+.heading{
+  width:100%;
   font-size:25px;
-  padding: 2% 0% 2% 15%;
+  padding: 2% 0% 1% 20%;
   font-weight: 700;
   float: left;
 }
 
 .shortnote{
-  width: 18%;
-  padding-left: 5%;
-  color: rgb(1, 119, 216);
-  font-size: medium;
-  margin: 0%;
+  width: 100%;
+  padding: 0% 13% 1% 5%;
+  color: rgb(134, 136, 138);
+  font-size:large;
+  margin: 0% 20% 0% 0%;
   float: left;
   text-align: center;
 }
 
-.image2{
+.container1{
   width: 100%;
-  height: 20rem;
+  height: 30rem;
   float:left;
-  background-size:cover;
-  background-image: url(./Components/Images/image2.jpg);
+  
 }
 
+.para{
+  width: 50%;
+  float: left;
+}
 .use-head{
   width: 100%;
   float: left;
   font-weight: 700;
-  padding: 10%;
+  font-size: 30px;
+  padding: 25% 0% 0% 15%;
 }
+
+.features{
+  width: 100;
+  float: left;
+  font-size: larger;
+  padding: 0% 10% 0% 15%;
+}
+
+.image2{
+  width: 50%;
+  float: left;
+  height: 30rem;
+  background-size: cover;
+  background-image: url(./Components/Images/image2.jpg);
+}
+
+.image3{
+  width: 50%;
+  float: left;
+  height: 30rem;
+  background-size: cover;
+  background-image: url(./Components/Images/image3.jpg);
+}
+
+.image4{
+  width: 50%;
+  float: left;
+  height: 30rem;
+  background-size: cover;
+  background-image: url(./Components/Images/image4.jpg);
+}
+
+.lastpara{
+  width: 100%;
+  float: left;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  padding: 10% 0% 0% 30%;
+}
+
