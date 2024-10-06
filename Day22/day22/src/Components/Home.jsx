@@ -1,4 +1,5 @@
 import React from "react"
+import { review } from "./Review";
 
 function home(){
     return(
@@ -53,23 +54,33 @@ function home(){
                     <div className="image4"></div>
                 </div>
                 <div>
-                    <div>
-                        <p>What people are saying...</p>
+                    <div className="reviews">
+                         
+                        <p>What people are saying..</p>
                     </div>
                     <div>
-
+                        {review}
                     </div>
-                    <div>
-
-                    </div>
-                    <div>
-
-                    </div>
+                    
                 </div>
-                <div className="image1">
+                <div style={{height: "20rem"}} className="image1">
                     <p className="lastpara">Ready to get started? Sign up now!</p>
                     <input className="email" placeholder="   Email Address"></input>
                     <button className="submit">Submit</button>
+                </div>
+                <div className="socialmedia">
+                    <div>
+                        <p>About</p>
+                        <p>contact</p>
+                        <p>Terms of Use</p>
+                        <p> Privacy Policy</p>
+                    </div>
+                    <div>
+                        <p>© Your Website 2024. All Rights Reserved.</p>
+                    </div>
+                    <div>
+
+                    </div>
                 </div>
 
         </div>
