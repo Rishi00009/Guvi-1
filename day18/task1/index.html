@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Cute Cat Image</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='script.js'></script>
+</head>
+<body>
+    <div>
+        <p id="title">This site give you a random cat images</p>
+    </div>
+    <div ><img id="image" src="" alt="cute cat Image"></div>
+
+    <div>
+        <p id="button">Click the button to get a random cat images  </p>
+        <button id = "btn" onclick="loadData()">Click</button>
+    </div>
+    
+    
+    
+
+
+
+
+    <script>
+    function loadData() {
+        fetch('https://api.thecatapi.com/v1/images/search')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data[0].url)
+    const imageUrl = data[0].url; 
+    const imageElement = document.getElementById('image');
+    imageElement.src = imageUrl;
+  })
+  .catch(error => console.error('Error:', error));
+    }
+
+    </script>
+</body>
+</html>
